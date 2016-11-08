@@ -10,11 +10,6 @@ namespace RandomGift.Core
     public interface IGiveaway : IDisposable
     {
         /// <summary>
-        /// Gets the fully qualified file path.
-        /// </summary>
-        string FilePath { get; }
-
-        /// <summary>
         /// Gets the list of entries.
         /// </summary>
         List<string> Entries { get; }

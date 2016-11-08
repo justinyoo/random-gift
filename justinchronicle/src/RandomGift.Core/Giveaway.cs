@@ -16,23 +16,10 @@ namespace RandomGift.Core
         /// <summary>
         /// Initialises a new instance of the <see cref="Giveaway"/> class.
         /// </summary>
-        /// <exception cref="ArgumentNullException"><paramref name="filepath"/> is <see langword="null" />.</exception>
-        public Giveaway(string filepath)
+        public Giveaway()
         {
-            if (string.IsNullOrWhiteSpace(filepath))
-            {
-                throw new ArgumentNullException(nameof(filepath));
-            }
-
-            this.FilePath = filepath;
-
             this.Entries = new List<string>();
         }
-
-        /// <summary>
-        /// Gets the fully qualified file path.
-        /// </summary>
-        public string FilePath { get; }
 
         /// <summary>
         /// Gets the list of entries.
