@@ -21,7 +21,7 @@ namespace RandomGift.Core.Tests
         [InlineData(2, 500)]
         public async void Given_Numbers_Draw_ShouldReturn_Results(int numberOfWinners, int numberOfEntries)
         {
-            var ga = new Giveaway();
+            var ga = new Giveaway("sample.csv");
             var results = await ga.DrawAsync(numberOfWinners, numberOfEntries).ConfigureAwait(false);
 
             results.Should().HaveCount(numberOfWinners);
